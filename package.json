@@ -1,0 +1,12 @@
+{
+  "name": "chatterup",
+  "version": "1.0.0",
+  "description": "A chatting app based on socket Programming",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
