@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatterUp</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <nav>
+        ChatterUp
+    </nav>
+
+    <div class="join-room">
+
+        <div class="avatar-container">
+            <div class="avatar female background" data-image="1">
+
+            </div>
+            <div class="avatar male background" data-image="2">
+
+            </div>
+
+        </div>
+
+        <div class="username inputField">
+            <label for="userName">Username</label>
+            <input autocomplete="off" placeholder="Username" type="text" id="userName">
+        </div>
+        
+        <div class="roomname inputField">
+            <label for="roomName">Room-Code</label>
+            <input autocomplete="off" placeholder="Room-code" type="text" id="roomName">
+        </div>
+
+        <button class="join">Join Room</button>
+    </div>
+
+    <div class="hide" id="chatBox">
+        <div class="User">
+            <div class="image background avatar">
+
+            </div>
+            <div class="name-container">
+                <span class="name"></span>
+                <span id="typing"></span>
+            </div>
+        </div>
+        <div class="message-container" id="messageList">
+        </div>
+        <div class="send-message">
+            <input type="text" class="message">
+            <button class="send">Send</button>
+        </div>
+    </div>
+
+    
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="./index.js">
+
+    </script>
+</body>
+</html>
