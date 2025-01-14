@@ -8,7 +8,8 @@ import { setupSocketHandlers } from './socketConnection/HandelConnectRequest.js'
 const app = express();
 app.use(cors());
 
-app.use(express.static("./public"))
+const publicPath = path.join(path.resolve(),"Public");
+app.use(express.static(publicPath));
 
 app.get('/',(req,res)=>{
     const pathToFile = path.join(path.resolve(),"Client","index.html");
