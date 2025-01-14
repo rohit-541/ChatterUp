@@ -4,7 +4,7 @@ export const newJoin = async (message,socket)=>{
 
     //Create a new join message to broadcast to every user
     const newMessage = `New user ${message.user} joined in the room`;
-    socket.broadcast.emit('newJoin',newMessage);
+    socket.broadcast.to(socket.room).emit('newJoin',newMessage);
     
     //Attach the information to socket
     socket.user = message.user;
