@@ -12,8 +12,8 @@ app.use(express.static("./public"))
 
 app.get('/',(req,res)=>{
     const pathToFile = path.join(path.resolve(),"Client","index.html");
-    
-    res.sendFile(pathToFile);
+    res.send("Hi")
+    // res.sendFile(pathToFile);
 })
 
 export const server = http.createServer(app);
