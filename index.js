@@ -16,6 +16,8 @@ app.get('/',(req,res)=>{
     // res.sendFile(pathToFile);
 })
 
+
+
 export const server = http.createServer(app);
 
 const io =  new Server(server,{
