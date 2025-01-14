@@ -12,12 +12,12 @@ export const setupSocketHandlers = (io) => {
 
         //Broadcast the new Message to every user
         socket.on('newMessage',async (message)=>{
-            const newMessage = new messageModel({
-                user:message.user,
-                text:message.text,
-                room:socket.room
-            });
-            await newMessage.save();
+            // const newMessage = new messageModel({
+            //     user:message.user,
+            //     text:message.text,
+            //     room:socket.room
+            // });
+            // await newMessage.save();
             socket.to(socket.room).emit('newMessage',message);
         });
 
