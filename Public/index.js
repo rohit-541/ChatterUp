@@ -2,7 +2,7 @@
 //connect to chat server
 let socket;
 try {
-    socket = io.connect('http://localhost:3000/');
+    socket = io.connect('https://chatterup-q02b.onrender.com/');
 } catch (error) {
     console.log(error);
     alert('Please try later');
