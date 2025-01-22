@@ -2,8 +2,9 @@
 //connect to chat server
 let socket;
 try {
-    socket = io.connect('https://chatterup-q02b.onrender.com/');
+    socket = io.connect('http://localhost:3000/');
 } catch (error) {
+    console.log(error);
     alert('Please try later');
 }
 
@@ -45,6 +46,7 @@ joinRoom.addEventListener('click',()=>{
 
     // if server is offline alert the user and reset the value in input field
     if(!socket){
+        console.log(socket);
         alert("Server is offline now");
         userNameEl.value = "";
         roomEl.value = "";

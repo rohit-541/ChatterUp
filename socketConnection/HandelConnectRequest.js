@@ -1,5 +1,5 @@
 import { newJoin } from "./functions.js";
-import { messageModel } from "../messageModel/messageSchema.js";
+
 
 export const setupSocketHandlers = (io) => {
     io.on('connection', (socket) => {

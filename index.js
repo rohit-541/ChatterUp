@@ -9,6 +9,7 @@ const app = express();
 app.use(cors());
 
 const publicPath = path.join(path.resolve(),"Public");
+console.log(publicPath);
 app.use(express.static(publicPath));
 
 app.get('/',(req,res)=>{

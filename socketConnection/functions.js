@@ -1,4 +1,3 @@
-import { messageModel } from "../messageModel/messageSchema.js";
 
 export const newJoin = async (message,socket)=>{
 
@@ -15,9 +14,8 @@ export const newJoin = async (message,socket)=>{
 
     //Emit the welcome message to new joiny
     //find all the message and send the object to user
-    const result = await messageModel.find({room:socket.room});
     const Replymessage={
-        oldMessage:result,
+        oldMessage:[],
         welcome:`Welcome ${message.user} in ${message.room}`
     }
     socket.emit('welcome',Replymessage);
